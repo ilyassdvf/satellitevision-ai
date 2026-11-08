@@ -231,12 +231,14 @@ if page == "Home":
     <div class="hero">
         <h1>🛰️ SatelliteVision AI</h1>
         <p>
-        Intelligent satellite image classification
-        using deep learning and ResNet18.
+        Efficient Fine-Tuning of Deep Learning Models
+        for Satellite Image Classification
         </p>
         <p>
-        Research demonstration: efficient fine-tuning
-        for geographically unseen satellite imagery.
+        A research demonstration investigating how a
+        pretrained ResNet18 model can be adapted to
+        geographically unseen satellite imagery using
+        limited labelled training data.
         </p>
     </div>
     """, unsafe_allow_html=True)
@@ -260,7 +262,7 @@ if page == "Home":
         st.markdown("""
         <div class="info-card">
             <h3>🏘️ Residential</h3>
-            <p>Built-up and urban land.</p>
+            <p>Built-up areas containing buildings and infrastructure.</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -268,7 +270,7 @@ if page == "Home":
         st.markdown("""
         <div class="info-card">
             <h3>🌊 SeaLake</h3>
-            <p>Permanent water bodies.</p>
+            <p>Permanent water bodies, including lakes.</p>
         </div>
         """, unsafe_allow_html=True)
 
@@ -281,6 +283,19 @@ if page == "Home":
     m1.metric("Architecture", "ResNet18")
     m2.metric("Training Patches", "105")
     m3.metric("Target Classes", "3")
+
+    st.markdown("### Research Focus")
+
+    st.write(
+        "The research focuses on fine-tuning efficiency, "
+        "classification performance, and geographic "
+        "generalization when adapting a pretrained deep "
+        "learning model to satellite imagery from different locations."
+    )
+
+    st.write("**Input:** 64 × 64 satellite image patches.")
+    st.write("**Spectral Bands:** B04, B03, B02.")
+    st.write("**Framework:** PyTorch and Streamlit.")
 
     st.info(
         "This system classifies individual 64 × 64 satellite "
